@@ -14,14 +14,14 @@ const Box = styled(motion.div)`
 
   background: linear-gradient(
         to right,
-        ${(props) => props.theme.body} 50%,
-        ${(props) => props.theme.text} 50%
+        ${(props) => props.theme.body} 30%,
+        ${(props) => props.theme.text} 70%
       )
       bottom,
     linear-gradient(
         to right,
-        ${(props) => props.theme.body} 50%,
-        ${(props) => props.theme.text} 50%
+        ${(props) => props.theme.body} 30%,
+        ${(props) => props.theme.text} 70%
       )
       top;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@ const SubBox = styled.div`
 
 const Text = styled.div`
   font-size: calc(1em + 1.5vw);
-  color: ${(props) => props.theme.body};
+  color: #222222;
   padding: 2rem;
   cursor: pointer;
   display: flex;
@@ -67,7 +67,7 @@ const Text = styled.div`
     margin-bottom: 0.8rem;
   }
   .small {
-    color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
+    color: #222222;
     font-size: calc(0.5rem + 1vw);
     font-weight: 300;
   }
@@ -79,9 +79,9 @@ const Text = styled.div`
 function Intro() {
   return (
     <Box
-      initial={{ width: "0" }}
-      animate={{ width: "65vw" }}
-      transition={{ type: "ease-in-out", duration: 1, delay: 0.3 }}
+      initial={{ width: "40vw", opacity: 0 }}
+      animate={{ width: "65vw", opacity: 1 }}
+      transition={{ type: "ease-in-out", duration: 0.8, delay: 0.1 }}
     >
       <SubBox>
         <Text>
@@ -91,11 +91,7 @@ function Intro() {
         </Text>
       </SubBox>
       <SubBox>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ type: "ease", duration: 1 }}
-        >
+        <motion.div>
           <img className="pic" src={Me} alt="DP"></img>
         </motion.div>
       </SubBox>

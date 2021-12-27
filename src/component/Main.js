@@ -3,45 +3,30 @@ import styled, { keyframes } from "styled-components";
 import Navbar from "../subComponents/Navbar";
 import Intro from "../component/Intro";
 import SocialIcons from "../subComponents/SocialIcons";
+import { MainContainer } from "../subComponents/PageComponents";
 
 const Container = styled.div`
   padding: 2rem;
 `;
 
-const MainContainer = styled.div`
-  background-color: ${(props) => props.theme.body};
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Karla", sans-serif;
-    font-weight: 500;
-  }
-`;
-
 const DarkDivIntro = keyframes`
 from {
-  width: 0%;
+  clip-path: polygon(50% 0%, 78% 0, 100% 20%, 100% 100%, 25% 100%, 0% 60%, 10% 20%);
 }
 to {
-  width: 100%;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 }
 `;
 
 const DarkDiv = styled.div`
   position: absolute;
   top: 0;
-  bottom: 0;
   right: 50%;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #fdd231;
   z-index: 1;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
   animation: ${DarkDivIntro} 1s ease-in-out;
 `;
 
