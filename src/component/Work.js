@@ -8,22 +8,27 @@ import {
   Row,
   Btn,
   WorkCard,
+  AnimatedItems,
+  AnimatedContainer,
 } from "../subComponents/PageComponents";
 
 import Works from "../data/Works";
-import styled from "styled-components";
 
 const WorkComponent = (props) => {
-  const { name, description, visitLink, glink, type, stack } = props.work;
+  const { id, name, description, visitLink, glink, type, stack } = props.work;
   return (
-    <WorkCard>
+    <WorkCard id={id} variants={AnimatedItems} initial="hidden" animate="show">
       <h2>{name}</h2>
       <h4>{type} </h4>
       <p>{description}</p>
       <h6>{stack}</h6>
       <Row style={{ justifyContent: "space-between", width: "50%" }}>
-        <Btn>Github</Btn>
-        <Btn>Visit</Btn>
+        <a href={glink} target="_blank" rel="noreferrer">
+          <Btn>Github</Btn>
+        </a>
+        <a href={visitLink} target="_blank" rel="noreferrer">
+          <Btn>Visit</Btn>{" "}
+        </a>
       </Row>
     </WorkCard>
   );
@@ -36,6 +41,9 @@ const Work = () => {
       <SocialIcons />
 
       <Container
+        variants={AnimatedContainer}
+        initial="hidden"
+        animate="show"
         style={{
           margin: "5rem 0",
           flexWrap: "wrap",

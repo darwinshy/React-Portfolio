@@ -1,15 +1,17 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { DropAnimation } from "./PageComponents";
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   position: fixed;
   top: 2rem;
-  right: 0%;
-  width: 50%;
+  left: 0;
+  width: 100%;
   z-index: 100;
 `;
 
@@ -20,16 +22,24 @@ const NavBtn = styled.button`
   background: none;
   transition: all 0.2s ease-in;
   opacity: 0.2;
+  margin: 0 2rem;
   color: ${(props) => props.theme.text};
   &:hover {
     opacity: 1;
     cursor: pointer;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <Nav>
+    <Nav
+      variants={DropAnimation}
+      initial={props.value === "main" ? "init" : ""}
+      animate={props.value === "main" ? "show" : ""}
+    >
       <NavLink to="/">
         <NavBtn>Home</NavBtn>
       </NavLink>
@@ -45,6 +55,16 @@ const Navbar = () => {
       <NavLink to="/contact">
         <NavBtn>Contact</NavBtn>
       </NavLink>
+      <NavBtn>
+        <a
+          href="https://drive.google.com/file/d/1JqXOn2fXB1YzfhxBwnuhy4DF71tf1e_-/view?usp=sharing"
+          style={{ color: "#000" }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Resume
+        </a>
+      </NavBtn>
     </Nav>
   );
 };

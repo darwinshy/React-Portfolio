@@ -1,8 +1,10 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { Facebook, Github, Twitter } from "../component/SVGS";
+import { Facebook, Github, Twitter } from "../assets/svg/SVGS";
+import { RevealAnimation } from "./PageComponents";
 
-const Socials = styled.div`
+const Socials = styled(motion.div)`
   display: flex;
   flex-direction: column;
   height: 40%;
@@ -25,9 +27,13 @@ const Line = styled.span`
   transition: all 0.5s ease-in-out;
 `;
 
-const SocialIcons = () => {
+const SocialIcons = (props) => {
   return (
-    <Socials>
+    <Socials
+      variants={RevealAnimation}
+      initial={props.value === "main" ? "init" : ""}
+      animate={props.value === "main" ? "show" : ""}
+    >
       <a
         href="https://www.facebook.com/shashwat.priyadarshy.3/"
         style={{ color: "#000" }}

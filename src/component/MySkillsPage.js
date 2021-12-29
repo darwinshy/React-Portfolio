@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../subComponents/Navbar";
 import SocialIcons from "../subComponents/SocialIcons";
+
 import {
   MainContainer,
   BGText,
   Container,
   Row,
   SkillBox,
+  AnimatedContainer,
 } from "../subComponents/PageComponents";
 
 const MySkillsPage = () => {
@@ -15,7 +17,7 @@ const MySkillsPage = () => {
       <Navbar />
       <SocialIcons />
       <BGText>SKILLS</BGText>
-      <Container>
+      <Container variants={AnimatedContainer} initial="hidden" animate="show">
         <Row>
           <SkillBox style={{ flexDirection: "column" }}>
             <h2>Website Developement</h2>
