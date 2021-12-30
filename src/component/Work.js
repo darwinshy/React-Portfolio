@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../subComponents/Navbar";
 import SocialIcons from "../subComponents/SocialIcons";
+import Works from "../data/Works";
+
 import {
   MainContainer,
   BGText,
@@ -11,8 +13,6 @@ import {
   AnimatedItems,
   AnimatedContainer,
 } from "../subComponents/PageComponents";
-
-import Works from "../data/Works";
 
 const WorkComponent = (props) => {
   const { id, name, description, visitLink, glink, type, stack } = props.work;
@@ -36,14 +36,17 @@ const WorkComponent = (props) => {
 
 const Work = () => {
   return (
-    <MainContainer style={{ height: "auto", minHeight: "100vh" }}>
+    <MainContainer
+      variants={AnimatedContainer}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ height: "auto", minHeight: "100vh" }}
+    >
       <Navbar />
       <SocialIcons />
 
       <Container
-        variants={AnimatedContainer}
-        initial="hidden"
-        animate="show"
         style={{
           margin: "5rem 0",
           flexWrap: "wrap",

@@ -16,12 +16,17 @@ const Container = styled.div`
 
 const Main = () => {
   return (
-    <MainContainer>
+    <MainContainer
+      variants={AnimatedContainer}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <Container>
         <Navbar value="main" />
         <SocialIcons value="main" />
         <DarkDiv />
-        <Intro variants={AnimatedContainer} initial="hidden" animate="show" />
+        <Intro />
       </Container>
     </MainContainer>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../subComponents/Navbar";
 import SocialIcons from "../subComponents/SocialIcons";
-
 import {
   MainContainer,
   BGText,
@@ -13,11 +12,16 @@ import {
 
 const MySkillsPage = () => {
   return (
-    <MainContainer>
+    <MainContainer
+      variants={AnimatedContainer}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <Navbar />
       <SocialIcons />
       <BGText>SKILLS</BGText>
-      <Container variants={AnimatedContainer} initial="hidden" animate="show">
+      <Container>
         <Row>
           <SkillBox style={{ flexDirection: "column" }}>
             <h2>Website Developement</h2>

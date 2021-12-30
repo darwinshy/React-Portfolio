@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../subComponents/Navbar";
 import SocialIcons from "../subComponents/SocialIcons";
 import AboutImg from "../assets/Images/about.png";
-import styled from "styled-components";
 import ParticleComponent from "../subComponents/ParticleComponent";
 
 import {
@@ -11,72 +10,25 @@ import {
   AnimatedContainer,
   Column,
   BGImage,
+  AboutMe,
 } from "../subComponents/PageComponents";
-
-const AboutMe = styled.div`
-  display: flex;
-  width: 55vw;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: space-around;
-  border-bottom: 3px solid #e6e6e6;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  a {
-    color: #505050;
-  }
-
-  .topic {
-    opacity: 0.4;
-  }
-  .subtopic {
-    font-size: 2.5rem;
-  }
-
-  .desc {
-    font-size: 4rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
-    margin-top: 0.5rem;
-  }
-  .topMargin {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: 100;
-  }
-  .lessTopMargin {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    font-weight: 100;
-  }
-`;
 
 const AboutPage = () => {
   return (
-    <MainContainer style={{ height: "auto" }}>
+    <MainContainer
+      style={{ height: "auto" }}
+      variants={AnimatedContainer}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <Navbar />
       <SocialIcons />
       <ParticleComponent />
       <BGImage>
         <img src={AboutImg} alt=""></img>
       </BGImage>
-      <Container
-        style={{ alignItems: "end" }}
-        variants={AnimatedContainer}
-        initial="hidden"
-        animate="show"
-      >
+      <Container style={{ alignItems: "end" }}>
         <AboutMe>
           <h1 className="topic">about me.</h1>
           <Column>
