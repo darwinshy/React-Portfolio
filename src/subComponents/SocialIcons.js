@@ -35,7 +35,7 @@ const SocialIcons = (props) => {
       animate={props.value === "main" ? "show" : ""}
     >
       <a
-        href="https://www.facebook.com/shashwat.priyadarshy.3/"
+        href="https://github.com/darwinshy"
         style={{ color: "#000" }}
         target="_blank"
         rel="noreferrer"
