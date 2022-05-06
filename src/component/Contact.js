@@ -129,7 +129,7 @@ const Contact = () => {
           <ContactBox>
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"></img>
             <a
-              href="https://github.com/reverope"
+              href="https://github.com/darwinshy"
               target="_blank"
               rel="noreferrer"
             >
