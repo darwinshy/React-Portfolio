@@ -133,7 +133,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              reverope
+              darwinshy
             </a>
           </ContactBox>
           <ContactBox>
@@ -149,11 +149,11 @@ const Contact = () => {
           <ContactBox>
             <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/codeforces-512.png"></img>
             <a
-              href="https://leetcode.com/reverope/"
+              href="https://leetcode.com/iamthedarwin/"
               target="_blank"
               rel="noreferrer"
             >
-              reverope
+              iamthedarwin
             </a>
           </ContactBox>
           <ContactBox>
