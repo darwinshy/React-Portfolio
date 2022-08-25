@@ -57,7 +57,7 @@ const Navbar = (props) => {
       </NavLink>
       <NavBtn>
         <a
-          href="https://drive.google.com/file/d/1JqXOn2fXB1YzfhxBwnuhy4DF71tf1e_-/view?usp=sharing"
+          href="https://drive.google.com/file/d/1z3FOJ5gayy09KoOgNaPRUWSl_GVbZVcv/view?usp=sharing"
           style={{ color: "#000" }}
           target="_blank"
           rel="noreferrer"

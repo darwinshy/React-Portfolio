@@ -1,8 +1,8 @@
-import React from "react";
-import Navbar from "../subComponents/Navbar";
-import SocialIcons from "../subComponents/SocialIcons";
-import AboutImg from "../assets/Images/about.png";
-import ParticleComponent from "../subComponents/ParticleComponent";
+import React from 'react';
+import Navbar from '../subComponents/Navbar';
+import SocialIcons from '../subComponents/SocialIcons';
+import AboutImg from '../assets/Images/about.png';
+import ParticleComponent from '../subComponents/ParticleComponent';
 
 import {
   MainContainer,
@@ -11,12 +11,12 @@ import {
   Column,
   BGImage,
   AboutMe,
-} from "../subComponents/PageComponents";
+} from '../subComponents/PageComponents';
 
 const AboutPage = () => {
   return (
     <MainContainer
-      style={{ height: "auto" }}
+      style={{ height: 'auto' }}
       variants={AnimatedContainer}
       initial="hidden"
       animate="show"
@@ -28,7 +28,7 @@ const AboutPage = () => {
       <BGImage>
         <img src={AboutImg} alt=""></img>
       </BGImage>
-      <Container style={{ alignItems: "end" }}>
+      <Container style={{ alignItems: 'end' }}>
         <AboutMe>
           <h1 className="topic">about me.</h1>
           <Column>
@@ -46,7 +46,7 @@ const AboutPage = () => {
         </AboutMe>
         <AboutMe>
           <h1 className="topic">education.</h1>
-          <Column style={{ height: "60%", justifyContent: "space-around" }}>
+          <Column style={{ height: '60%', justifyContent: 'space-around' }}>
             <Column>
               <h1 className="subtopic">Highschool and Intermediate</h1>
               <p>Sunbeam School Lahartara, Varanasi</p>
@@ -70,35 +70,39 @@ const AboutPage = () => {
         </AboutMe>
         <AboutMe>
           <h1 className="topic">experience.</h1>
-          <Column style={{ height: "60%", justifyContent: "space-around" }}>
+          <Column style={{ height: '60%', justifyContent: 'space-around' }}>
             <Column>
-              <a
-                href="https://www.linkedin.com/company/live-ombr%C3%A9/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://liveombre.com/" target="_blank" rel="noreferrer">
                 <h1 className="subtopic">Ombre, Live with us</h1>
               </a>
-              <p>SDE, Intern</p>
+              <p>SDE, Intern (May 2021 – Sept 2021)</p>
               <h4 className="topMargin">
                 Joined as a SDE, Intern for 5 months, and was responsible for
                 developing algorithms to rank and take feedbacks from the users.
               </h4>
             </Column>
             <Column>
-              <h1 className="subtopic">Biolege Healthtech</h1>
-              <p>SDE, Intern</p>
+              <a
+                href="https://dev.briidge.live/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h1 className="subtopic">Briidge, Autolink</h1>{' '}
+              </a>
+              <p>SDE, Intern (May 2022 – July 2022)</p>
 
               <h4 className="topMargin">
-                Joined as a SDE, Intern for 5 months, and was responsible for
-                developing a complete application for end users.
+                Joined as a SDE, Intern for 2 months, and was responsible for
+                maintaining a REACT application. Implemented a signup flow for
+                the users so that they auto enter into the application
+                seemlessly.
               </h4>
             </Column>
           </Column>
         </AboutMe>
         <AboutMe>
           <h1 className="topic">interests.</h1>
-          <Column style={{ height: "60%", justifyContent: "space-around" }}>
+          <Column style={{ height: '60%', justifyContent: 'space-around' }}>
             <Column>
               <h1 className="subtopic">Cross Platform Technology</h1>
 

@@ -159,11 +159,11 @@ const Contact = () => {
           <ContactBox>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ByHubgatDw4-WWSW-UmW6sJpw0uP1imz0OlOJJWLdaz00JHRAFxE9v8ZBIH5EkoVf4E&usqp=CAU"></img>
             <a
-              href="https://www.hackerearth.com/@minimalist_coder"
+              href="https://www.hackerearth.com/@iamthedarwin"
               target="_blank"
               rel="noreferrer"
             >
-              @minimalist_coder
+              @iamthedarwin
             </a>
           </ContactBox>
         </ContactForm>
